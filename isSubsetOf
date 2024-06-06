@@ -16,9 +16,37 @@
  * See http://en.wikipedia.org/wiki/Subset for more on the definition of a
  * subset.
 */
+
+var arr1=['abc','def','jklm'];
 Array.prototype.isSubsetOf = function (arr) {
-  // your code here
+  while(!arr.length<0){
+    return this.reduce(arr,function(acc,element){
+      if(arr1.includes(element))
+        return acc=true
+      else 
+      return acc=false
+    })
+      
+      
 
+     for(var i=0;i<arr.length;i++){
+      if(arr1.includes(arr[i]))
+        return true
+}
+  return false
+}
+
+else if (arr1 > arr){
+  if (arr.includes(Array[key])){
+      return true
+  }
+  return false
+}
+return false 
+
+}
+
+//
+Array.prototype.isSubsetOf = function(arr) {
+  return this.every(element => arr.includes(element));
 };
-
-/*

@@ -24,7 +24,7 @@ function duplicate(string1,string2){
     sum=''
     for (let i = 0; i < string1.length; i++) {
        if (string2.indexOf(string1[i])!==-1 && string1[i]!==' '){
-        if(string1.indexOf(string1[i])===string1.lastIndexOf(string1[i])){
+        if(!sum.includes(string1[i])){
             sum+=string1[i]
         }
      
@@ -33,7 +33,7 @@ function duplicate(string1,string2){
             
             
         }
-        return sum
+        return sum || null
         
     }
 
